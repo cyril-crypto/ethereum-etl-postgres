@@ -6,3 +6,6 @@ create index transactions_from_address_block_timestamp_index on transactions (fr
 create index transactions_to_address_block_timestamp_index on transactions (to_address, block_timestamp desc);
 
 CREATE INDEX transactions_block_number_from_address ON transactions (block_number, from_address);
+
+create index transactions_block_number_receipt_gas_used
+    on transactions (block_number, receipt_gas_used);
